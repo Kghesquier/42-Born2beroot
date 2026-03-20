@@ -1,0 +1,89 @@
+Check le .vdi :
+
+<shasum Born2beroot.vdi>
+
+Verify that no graphical interface is in use :
+
+<ls /usr/bin/*session>
+
+Check that the UFW service is in use :
+
+<sudo ufw status>
+<sudo service ufw status>
+
+Check that the SSH service is in use :
+
+<sudo service ssh status>
+
+Check OS :
+
+<uname --kernel-version>
+
+Check user and group :
+
+<getent group sudo>
+<getent group user42>
+
+Add a user to a group :
+
+<sudo adduser name_user>
+<sudo addgroup evaluating>
+<sudo adduser name_user evaluating>
+
+Check passwd policy :
+
+<nano /etc/login.defs>
+<nano /etc/pam.d/common-password>
+
+Check hostname and replace it :
+
+<hostname>
+<sudo nano /etc/hostname>
+<sudo nano /etc/hosts>
+<sudo reboot>
+
+Check partitions :
+
+<lsblk>
+
+Check sudo :
+
+<which sudo>
+
+Check adduser to sudo :
+
+<sudo adduser name_user sudo>
+<getent group sudo>
+
+Check sudo rules :
+
+<sudo visudo>
+
+Check sudo logs :
+<sudo -i>
+<cd
+cd /var/log/sudo
+ls
+cat sudo_log>
+
+Check UFW
+
+<dpkg -s ufw>
+<sudo ufw status numbered>
+
+Create ufw rule
+
+<sudo ufw allow 8080>
+<sudo ufw delete num_rule>
+
+Check SSH
+
+<which ssh>
+sur term normal
+<ssh root@localhost -p 4242>
+<ssh newuser@localhost -p 4242>
+
+Check script
+
+<sudo crontab -u root -e>
+<sudo nano /usr/local/bin/monitoring.sh>
